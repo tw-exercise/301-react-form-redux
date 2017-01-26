@@ -1,0 +1,79 @@
+body {
+  background: #c1c1c1;
+  padding: 5px 0 10px 5px;
+}
+body .container {
+  width: 100%;
+}
+body #add-paper .header {
+  padding: 5px 0 5px 10px;
+  color: #FFFFFF;
+}
+body #add-paper .blue {
+  background-color: #438eb9;
+}
+body #add-paper .grey {
+  color: #c1c1c1;
+}
+body #add-paper .no-padding {
+  padding: 0;
+}
+body #add-paper .no-margin {
+  margin: 0;
+}
+body #add-paper .background {
+  background-color: #eff3f8;
+}
+body #add-paper .paper-info {
+  margin-bottom: 3px;
+  padding-top: 30px;
+}
+body #add-paper .paper-info .logic-puzzle-type .type {
+  max-width: 100%;
+}
+body #add-paper .program-quizze .title {
+  color: #FFFFFF;
+  padding: 5px 0 5px 10px;
+}
+body .partOne .addPaper {
+  color: #FFFFFF;
+  padding: 5px 0 5px 26px;
+}
+body .partOne .paperInfo {
+  padding: 30px 0 10px 0;
+  margin-bottom: 2px;
+}
+body .partTwo .programPuzzle .addProgram {
+  background-color: #FFFFFF;
+  border: 1px solid #c1c1c1;
+}
+body .partTwo .programPuzzle .addProgram .addProgramButton {
+  background-color: #FFFFFF;
+  border: solid 1px #c1c1c1;
+  margin: 15px 0 20px 10px;
+}
+body .partTwo .programPuzzle .addProgram .addProgramButton .fa {
+  font-size: 80px;
+  color: #c1c1c1;
+}
+body .partTwo .addSection {
+  background-color: #FFFFFF;
+  border: 1px solid #c1c1c1;
+  margin-top: 20px;
+}
+body .partTwo .addSection .addSectionButton {
+  background-color: #FFFFFF;
+  border: none;
+  margin: 15px 0 20px 10px;
+}
+body .partTwo .addSection .addSectionButton .fa {
+  font-size: 100px;
+  color: #c1c1c1;
+}
+body .partTwo .submitButton {
+  background-color: #438eb9;
+  color: #FFFFFF;
+  padding: 4px;
+  width: 55%;
+  margin-top: 15px;
+}

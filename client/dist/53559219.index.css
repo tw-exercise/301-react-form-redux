@@ -1,0 +1,33 @@
+body {
+  background: #c1c1c1;
+}
+body .blue {
+  background-color: #438eb9;
+}
+body .grey {
+  color: #c1c1c1;
+}
+body .no-padding {
+  padding: 0;
+}
+body .no-margin {
+  margin: 0;
+}
+body .partOne .addPaper {
+  color: #FFFFFF;
+  padding: 5px 0 5px 26px;
+}
+body .partOne .paperInfo {
+  padding: 30px 0 10px 0;
+  margin-bottom: 2px;
+}
+body .partOne .paperInfo .logicPuzzleType .type {
+  max-width: 100%;
+}
+body .background {
+  background-color: #eff3f8;
+}
+body .partTwo .programPuzzle .title {
+  color: #FFFFFF;
+  padding: 5px 0 5px 10px;
+}
