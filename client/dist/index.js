@@ -304,6 +304,15 @@ var LogicPuzzle = function (_Component) {
       this.setState({ isHasLogic: !this.state.isHasLogic });
     }
   }, {
+    key: 'inputInteger',
+    value: function inputInteger(e) {
+      if (e.target.value.length == 1) {
+        e.target.value = e.target.value.replace(/[^1-9]/g, '');
+      } else {
+        e.target.value = e.target.value.replace(/\D/g, '');
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -317,7 +326,7 @@ var LogicPuzzle = function (_Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'logic-puzzle', className: 'col-sm-2 control-label' },
+              { htmlFor: 'logic-puzzle', className: 'col-sm-2 control-label' },
               '\u903B\u8F91\u9898'
             ),
             _react2.default.createElement(
@@ -338,14 +347,15 @@ var LogicPuzzle = function (_Component) {
               { className: 'col-sm-4' },
               _react2.default.createElement(
                 'label',
-                { 'for': 'simple', className: 'col-xs-5 control-label' },
+                { htmlFor: 'simple', className: 'col-xs-5 control-label' },
                 '\u7B80\u5355'
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'col-xs-7 no-padding' },
                 _react2.default.createElement('input', { type: 'text', id: 'simple', className: 'form-control type',
-                  disabled: this.state.isHasLogic ? '' : 'disabled' })
+                  disabled: this.state.isHasLogic ? '' : 'disabled',
+                  onKeyUp: this.inputInteger.bind(this) })
               )
             ),
             _react2.default.createElement(
@@ -353,14 +363,15 @@ var LogicPuzzle = function (_Component) {
               { className: 'col-sm-4' },
               _react2.default.createElement(
                 'label',
-                { 'for': 'normal', className: 'col-xs-5 control-label' },
+                { htmlFor: 'normal', className: 'col-xs-5 control-label' },
                 '\u4E00\u822C'
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'col-xs-7 no-padding' },
                 _react2.default.createElement('input', { type: 'text', id: 'normal', className: 'form-control type',
-                  disabled: this.state.isHasLogic ? '' : 'disabled' })
+                  disabled: this.state.isHasLogic ? '' : 'disabled',
+                  onKeyUp: this.inputInteger.bind(this) })
               )
             ),
             _react2.default.createElement(
@@ -368,14 +379,15 @@ var LogicPuzzle = function (_Component) {
               { className: 'col-sm-4' },
               _react2.default.createElement(
                 'label',
-                { 'for': 'complex', className: 'col-xs-5 control-label' },
+                { htmlFor: 'complex', className: 'col-xs-5 control-label' },
                 '\u56F0\u96BE'
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'col-xs-7 no-padding' },
                 _react2.default.createElement('input', { type: 'text', id: 'complex', className: 'form-control type',
-                  disabled: this.state.isHasLogic ? '' : 'disabled' })
+                  disabled: this.state.isHasLogic ? '' : 'disabled',
+                  onKeyUp: this.inputInteger.bind(this) })
               )
             )
           )
@@ -438,13 +450,13 @@ var PaperInfo = function (_Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'paper-ame', className: 'col-sm-2 control-label' },
+              { htmlFor: 'paper-ame', className: 'col-sm-2 control-label' },
               '\u8BD5\u5377\u540D\u79F0'
             ),
             _react2.default.createElement(
               'div',
               { className: 'col-sm-10' },
-              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'paper-ame', placeholder: '\u8BF7\u8F93\u5165\u8BD5\u5377\u540D\u79F0' })
+              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'paper-ame', placeholder: '\u8BF7\u8F93\u5165\u8BD5\u5377\u540D\u79F0', maxLength: '32' })
             )
           ),
           _react2.default.createElement(
@@ -452,13 +464,13 @@ var PaperInfo = function (_Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'description', className: 'col-sm-2 control-label' },
+              { htmlFor: 'description', className: 'col-sm-2 control-label' },
               '\u8BD5\u5377\u63CF\u8FF0'
             ),
             _react2.default.createElement(
               'div',
               { className: 'col-sm-10' },
-              _react2.default.createElement('textarea', { className: 'form-control', id: 'description', placeholder: '\u8BF7\u8F93\u5165\u8BD5\u5377\u63CF\u8FF0' })
+              _react2.default.createElement('textarea', { className: 'form-control', id: 'description', placeholder: '\u8BF7\u8F93\u5165\u8BD5\u5377\u63CF\u8FF0', maxLength: '256' })
             )
           )
         )
