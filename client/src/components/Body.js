@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PaperInfo from '../containers/paperInfo';
-import ProgramQuizze from './ProgramQuizz';
+import HomeworkQuiz from '../containers/homeworkQuiz';
 import AddSection from './AddSection';
 import SubmitButton from './SubmitButton';
 import LogicPuzzle from '../containers/logicPuzzle';
@@ -21,7 +21,7 @@ export default class Body extends Component {
       <div className='row no-margin background part-two'>
         <div className='col-sm-offset-1 col-sm-10 '>
           <div className='program-quizze'>
-            <ProgramQuizze/>
+            <HomeworkQuiz/>
           </div>
           <div className='add-section'>
             <AddSection/>

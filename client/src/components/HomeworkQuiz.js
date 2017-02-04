@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
 export default class ProgramQuizz extends Component {
+  addHomeworkQuiz(){
+    this.props.addHomeworkQuiz('12345');
+  }
+
   render() {
     return (<div>
       <div className='row no-margin title blue'>
@@ -15,7 +19,7 @@ export default class ProgramQuizz extends Component {
         </div>
       </div>
       <div className='row no-margin add-program no-padding'>
-        <button className='add-program-button'>
+        <button className='add-program-button' onClick={this.addHomeworkQuiz.bind(this)}>
           <i className='fa fa-plus'></i>
         </button>
       </div>

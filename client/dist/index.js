@@ -143,9 +143,9 @@ var _paperInfo = __webpack_require__(246);
 
 var _paperInfo2 = _interopRequireDefault(_paperInfo);
 
-var _ProgramQuizz = __webpack_require__(87);
+var _homeworkQuiz = __webpack_require__(252);
 
-var _ProgramQuizz2 = _interopRequireDefault(_ProgramQuizz);
+var _homeworkQuiz2 = _interopRequireDefault(_homeworkQuiz);
 
 var _AddSection = __webpack_require__(83);
 
@@ -209,7 +209,7 @@ var Body = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'program-quizze' },
-              _react2.default.createElement(_ProgramQuizz2.default, null)
+              _react2.default.createElement(_homeworkQuiz2.default, null)
             ),
             _react2.default.createElement(
               'div',
@@ -496,87 +496,7 @@ var PaperInfo = function (_Component) {
 exports.default = PaperInfo;
 
 /***/ },
-/* 87 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(10);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ProgramQuizz = function (_Component) {
-  _inherits(ProgramQuizz, _Component);
-
-  function ProgramQuizz() {
-    _classCallCheck(this, ProgramQuizz);
-
-    return _possibleConstructorReturn(this, (ProgramQuizz.__proto__ || Object.getPrototypeOf(ProgramQuizz)).apply(this, arguments));
-  }
-
-  _createClass(ProgramQuizz, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'row no-margin title blue' },
-          _react2.default.createElement(
-            'div',
-            { className: 'col-sm-2 no-padding' },
-            _react2.default.createElement(
-              'span',
-              null,
-              '\u7F16\u7A0B\u9898'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-sm-2 no-padding' },
-            _react2.default.createElement('i', { className: 'fa fa-pencil-square-o', 'aria-hidden': 'true' })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-sm-8 text-right' },
-            _react2.default.createElement('i', { className: 'fa fa-trash-o', 'aria-hidden': 'true' })
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'row no-margin add-program no-padding' },
-          _react2.default.createElement(
-            'button',
-            { className: 'add-program-button' },
-            _react2.default.createElement('i', { className: 'fa fa-plus' })
-          )
-        )
-      );
-    }
-  }]);
-
-  return ProgramQuizz;
-}(_react.Component);
-
-exports.default = ProgramQuizz;
-
-/***/ },
+/* 87 */,
 /* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2975,9 +2895,13 @@ var _logicpuzzle = __webpack_require__(248);
 
 var _logicpuzzle2 = _interopRequireDefault(_logicpuzzle);
 
+var _homeworkQuiz = __webpack_require__(253);
+
+var _homeworkQuiz2 = _interopRequireDefault(_homeworkQuiz);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var rootReducer = (0, _redux.combineReducers)({ paperInfo: _paperInfo2.default, logicPuzzle: _logicpuzzle2.default });
+var rootReducer = (0, _redux.combineReducers)({ paperInfo: _paperInfo2.default, logicPuzzle: _logicpuzzle2.default, homeworkQuiz: _homeworkQuiz2.default });
 
 exports.default = rootReducer;
 
@@ -4029,6 +3953,152 @@ exports.default = function () {
         return action.logicPuzzle;
       }
   }
+  return state;
+};
+
+/***/ },
+/* 249 */,
+/* 250 */,
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ProgramQuizz = function (_Component) {
+  _inherits(ProgramQuizz, _Component);
+
+  function ProgramQuizz() {
+    _classCallCheck(this, ProgramQuizz);
+
+    return _possibleConstructorReturn(this, (ProgramQuizz.__proto__ || Object.getPrototypeOf(ProgramQuizz)).apply(this, arguments));
+  }
+
+  _createClass(ProgramQuizz, [{
+    key: 'addHomeworkQuiz',
+    value: function addHomeworkQuiz() {
+      this.props.addHomeworkQuiz('12345');
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'row no-margin title blue' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-2 no-padding' },
+            _react2.default.createElement(
+              'span',
+              null,
+              '\u7F16\u7A0B\u9898'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-2 no-padding' },
+            _react2.default.createElement('i', { className: 'fa fa-pencil-square-o', 'aria-hidden': 'true' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-8 text-right' },
+            _react2.default.createElement('i', { className: 'fa fa-trash-o', 'aria-hidden': 'true' })
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row no-margin add-program no-padding' },
+          _react2.default.createElement(
+            'button',
+            { className: 'add-program-button', onClick: this.addHomeworkQuiz.bind(this) },
+            _react2.default.createElement('i', { className: 'fa fa-plus' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return ProgramQuizz;
+}(_react.Component);
+
+exports.default = ProgramQuizz;
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reactRedux = __webpack_require__(210);
+
+var _HomeworkQuiz = __webpack_require__(251);
+
+var _HomeworkQuiz2 = _interopRequireDefault(_HomeworkQuiz);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapStateToProps = function mapStateToProps(state) {
+  return state;
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    addHomeworkQuiz: function addHomeworkQuiz(id) {
+      dispatch({ type: 'ADD_HOMEWORK_QUIZ', id: id });
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_HomeworkQuiz2.default);
+
+/***/ },
+/* 253 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'ADD_HOMEWORK_QUIZ':
+      {
+        console.log(action.id);
+      }
+  }
+
   return state;
 };
 
