@@ -4095,7 +4095,9 @@ exports.default = function () {
   switch (action.type) {
     case 'ADD_HOMEWORK_QUIZ':
       {
-        console.log(action.id);
+        var quizzes = state;
+        quizzes.push(action.id);
+        return quizzes;
       }
   }
 

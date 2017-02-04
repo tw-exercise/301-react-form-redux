@@ -1,7 +1,9 @@
 export default (state = [], action) => {
   switch (action.type) {
     case 'ADD_HOMEWORK_QUIZ': {
-      console.log(action.id)
+      const quizzes = state;
+      quizzes.push(action.id);
+      return quizzes;
     }
   }
 
