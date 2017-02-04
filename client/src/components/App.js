@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Body from './Body';
+import Body from '../containers/body';
 import '../../style/index.less';
 
 export default class App extends Component {

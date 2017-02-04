@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import PaperInfo from './PaperInfo';
+import PaperInfo from '../containers/paperInfo';
 import ProgramQuizze from './ProgramQuizz';
 import AddSection from './AddSection';
 import SubmitButton from './SubmitButton';
-import LogicPuzzle from './LogicPuzzle';
+import LogicPuzzle from '../containers/logicPuzzle';
 
 export default class Body extends Component {
   render() {

@@ -20,6 +20,14 @@ export default class LogicPuzzle extends Component {
     }
   }
 
+  setLogicPuzzle() {
+    this.props.setLogicPuzzle({
+      easy: parseInt(this.easy.value),
+      normal: parseInt(this.normal.value),
+      hard: parseInt(this.hard.value)
+    });
+  }
+
   render() {
     return (<div className='form-group logic-puzzle-type'>
       <form className='form-horizontal' role='form'>
@@ -37,7 +45,11 @@ export default class LogicPuzzle extends Component {
             <div className='col-xs-7 no-padding'>
               <input type='text' id='simple' className='form-control type'
                      disabled={this.state.isHasLogic ? '' : 'disabled'}
-                     onKeyUp={this.inputInteger.bind(this)}/>
+                     onKeyUp={this.inputInteger.bind(this)}
+                     ref={(ref) => {
+                       this.easy = ref
+                     }}
+                     onChange={this.setLogicPuzzle.bind(this)}/>
             </div>
           </div>
           <div className='col-sm-4'>
@@ -45,7 +57,12 @@ export default class LogicPuzzle extends Component {
             <div className='col-xs-7 no-padding'>
               <input type='text' id='normal' className='form-control type'
                      disabled={this.state.isHasLogic ? '' : 'disabled'}
-                     onKeyUp={this.inputInteger.bind(this)}/>
+                     onKeyUp={this.inputInteger.bind(this)}
+                     ref={(ref) => {
+                       this.normal = ref
+                     }}
+                     onChange={this.setLogicPuzzle.bind(this)}
+              />
             </div>
           </div>
           <div className='col-sm-4'>
@@ -53,7 +70,12 @@ export default class LogicPuzzle extends Component {
             <div className='col-xs-7 no-padding'>
               <input type='text' id='complex' className='form-control type'
                      disabled={this.state.isHasLogic ? '' : 'disabled'}
-                     onKeyUp={this.inputInteger.bind(this)}/>
+                     onKeyUp={this.inputInteger.bind(this)}
+                     ref={(ref) => {
+                       this.hard = ref
+                     }}
+                     onChange={this.setLogicPuzzle.bind(this)}
+              />
             </div>
           </div>
         </div>
