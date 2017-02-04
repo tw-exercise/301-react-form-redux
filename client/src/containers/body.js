@@ -5,4 +5,15 @@ const mapStateToProps = (state) => {
   return state;
 };
 
-export default connect(mapStateToProps)(Body);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    savePaper: (paper) => {
+      dispatch({type: 'SAVE', paper})
+    },
+    cancelPaper:(paper)=>{
+      dispatch({type: 'CANCEL', paper});
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Body);

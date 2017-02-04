@@ -219,7 +219,7 @@ var Body = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'submit-button' },
-              _react2.default.createElement(_SubmitButton2.default, null)
+              _react2.default.createElement(_SubmitButton2.default, { savePaper: this.props.savePaper.bind(this), cancelPaper: this.props.cancelPaper.bind(this) })
             )
           )
         )
@@ -621,7 +621,7 @@ var SubmitButton = function (_Component) {
           { className: 'col-sm-6 text-right' },
           _react2.default.createElement(
             'button',
-            { className: 'btn submitButton' },
+            { className: 'btn submitButton', onClick: this.props.savePaper },
             '\u4FDD\u5B58'
           )
         ),
@@ -630,7 +630,7 @@ var SubmitButton = function (_Component) {
           { className: 'col-sm-6 text-left' },
           _react2.default.createElement(
             'button',
-            { className: 'btn submitButton' },
+            { className: 'btn submitButton', onClick: this.props.cancelPaper },
             '\u53D6\u6D88'
           )
         )
@@ -2971,9 +2971,13 @@ var _paperInfo = __webpack_require__(245);
 
 var _paperInfo2 = _interopRequireDefault(_paperInfo);
 
+var _logicpuzzle = __webpack_require__(248);
+
+var _logicpuzzle2 = _interopRequireDefault(_logicpuzzle);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var rootReducer = (0, _redux.combineReducers)({ paperInfo: _paperInfo2.default });
+var rootReducer = (0, _redux.combineReducers)({ paperInfo: _paperInfo2.default, logicPuzzle: _logicpuzzle2.default });
 
 exports.default = rootReducer;
 
@@ -3897,7 +3901,18 @@ var mapStateToProps = function mapStateToProps(state) {
   return state;
 };
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(_Body2.default);
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    savePaper: function savePaper(paper) {
+      dispatch({ type: 'SAVE', paper: paper });
+    },
+    cancelPaper: function cancelPaper(paper) {
+      dispatch({ type: 'CANCEL', paper: paper });
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_Body2.default);
 
 /***/ },
 /* 245 */
@@ -3992,6 +4007,30 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_LogicPuzzle2.default);
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { easy: '', normal: '', hard: '' };
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'LOGICPUZZLE':
+      {
+        return action.logicPuzzle;
+      }
+  }
+  return state;
+};
 
 /***/ }
 ]),[186]);

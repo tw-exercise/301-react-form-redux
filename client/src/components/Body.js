@@ -27,7 +27,7 @@ export default class Body extends Component {
             <AddSection/>
           </div>
           <div className='submit-button'>
-            <SubmitButton/>
+            <SubmitButton savePaper={this.props.savePaper.bind(this)} cancelPaper={this.props.cancelPaper.bind(this)}/>
           </div>
         </div>
       </div>
