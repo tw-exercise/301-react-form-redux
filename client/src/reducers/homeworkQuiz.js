@@ -1,9 +1,10 @@
-export default (state = [], action) => {
+export default (state = {}, action) => {
   switch (action.type) {
     case 'ADD_HOMEWORK_QUIZ': {
-      const quizzes = state;
-      quizzes.push(action.id);
-      return quizzes;
+      return {type: 'homeworkQuiz', definition: {quizzes: action.quizzes}};
+    }
+    case 'DELETE_HOMEWORK_QUIZ': {
+      return {};
     }
   }
 

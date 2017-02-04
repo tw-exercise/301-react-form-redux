@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 
 export default class ProgramQuizz extends Component {
-  addHomeworkQuiz(){
-    this.props.addHomeworkQuiz('12345');
+  addHomeworkQuiz() {
+    this.props.addHomeworkQuiz(['12345']);
+  }
+
+  deleteHomeworkQuiz() {
+    this.props.deleteHomeworkQuiz();
   }
 
   render() {
@@ -15,7 +19,7 @@ export default class ProgramQuizz extends Component {
           <i className='fa fa-pencil-square-o' aria-hidden='true'></i>
         </div>
         <div className='col-sm-8 text-right'>
-          <i className='fa fa-trash-o' aria-hidden='true'></i>
+          <i className='fa fa-trash-o' aria-hidden='true' onClick={this.deleteHomeworkQuiz.bind(this)}></i>
         </div>
       </div>
       <div className='row no-margin add-program no-padding'>

@@ -7,8 +7,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addHomeworkQuiz: (id) => {
-      dispatch({type: 'ADD_HOMEWORK_QUIZ', id});
+    addHomeworkQuiz: (quizzes) => {
+      dispatch({type: 'ADD_HOMEWORK_QUIZ', quizzes});
+    },
+    deleteHomeworkQuiz: () => {
+      dispatch({type: 'DELETE_HOMEWORK_QUIZ'});
     }
   }
 };

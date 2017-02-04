@@ -1,7 +1,7 @@
-export default (state={easy:'',normal:'',hard:''},action)=>{
-  switch (action.type){
-    case 'LOGICPUZZLE':{
-      return action.logicPuzzle;
+export default (state = {}, action) => {
+  switch (action.type) {
+    case 'LOGICPUZZLE': {
+      return {type: 'logicPuzzle', definition: action.logicPuzzle};
     }
   }
   return state;
